@@ -135,3 +135,83 @@ lista = [10, 20, 30, 40, 50]
 Calculadora.promedio(lista) |> IO.puts()  # 30
 Calculadora.maximo(lista) |> IO.puts()    # 50
 Calculadora.minimo(lista) |> IO.puts()    # 10
+
+
+
+
+
+
+# lo que hices
+defmodule Calculadora do
+  import IO
+
+  def sumar(a , b \\ 0) do
+    a + b |> puts()
+  end
+
+  def restar(a , b \\ 0), do: a - b |> puts()
+
+  def dividir(a , b \\ 0), do: a / b |> puts()
+
+  def dividir_entero(a , b \\ 0), do: div(a,b) |> puts()
+
+  def multiplicar(a , b \\ 0), do: a * b |> puts()
+
+  def residuo(a , b \\ 0), do: rem(a,b) |> puts()
+
+
+end
+
+Calculadora.sumar(5,3)
+# 8
+
+Calculadora.restar(10, 4)
+# 5.0
+
+Calculadora.dividir(10, 2)
+# 5.0
+
+Calculadora.dividir_entero(10, 3)
+# 3
+
+Calculadora.residuo(10, 3)
+# 1
+Calculadora.multiplicar(10, 3)
+# 30
+
+
+
+# correccion
+
+defmodule Calculadora do
+  def sumar(a, b) do
+    a + b
+  end
+
+  def restar(a, b) do
+    a - b
+  end
+
+  def dividir(a, b) do
+    a / b
+  end
+
+  def dividir_entero(a, b) do
+    div(a, b)
+  end
+
+  def multiplicar(a, b) do
+    a * b
+  end
+
+  def residuo(a, b) do
+    rem(a, b)
+  end
+end
+
+IO.puts(Calculadora.sumar(5, 3))
+IO.puts(Calculadora.restar(10, 4))
+IO.puts(Calculadora.dividir(10, 2))
+IO.puts(Calculadora.dividir_entero(10, 3))
+IO.puts(Calculadora.multiplicar(4, 5))
+IO.puts(Calculadora.residuo(10, 3))
