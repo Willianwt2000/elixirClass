@@ -215,3 +215,7 @@ IO.puts(Calculadora.dividir(10, 2))
 IO.puts(Calculadora.dividir_entero(10, 3))
 IO.puts(Calculadora.multiplicar(4, 5))
 IO.puts(Calculadora.residuo(10, 3))
+
+
+
+
