@@ -1,46 +1,46 @@
-defmodule Geometry do
-  def rectangle_area(a, b) do
-    a * b
-  end
-end
+# defmodule Geometry do
+#   def rectangle_area(a, b) do
+#     a * b
+#   end
+# end
 
 
-result = Geometry.rectangle_area(3, 2)
-IO.puts("El área es: #{result}")
+# result = Geometry.rectangle_area(3, 2)
+# IO.puts("El área es: #{result}")
 
 
 
 # If a function resides in the same module, you can omit the module prefix:
-defmodule Geometry do
-  def rectangle_area(a, b) do
-    a * b
-  end
-  def square_area(a) do
-    rectangle_area(a, a)
-  end
-end
+# defmodule Geometry do
+#   def rectangle_area(a, b) do
+#     a * b
+#   end
+#   def square_area(a) do
+#     rectangle_area(a, a)
+#   end
+# end
 
 
 
 
 
-defmodule Rectangle do
-  def area(a), do: area(a, a)
-  def area(a, b), do: a * b
-end
+# defmodule Rectangle do
+#   def area(a), do: area(a, a)
+#   def area(a, b), do: a * b
+# end
 
 
 
 # example Listing 2.3   Same-name functions, different arities, default params (arity_calc.ex)
-defmodule Calculator do
-  def sum(a) do
-    sum(a,0)
-  end
+# defmodule Calculator do
+#   def sum(a) do
+#     sum(a,0)
+#   end
 
-  def sum(a,0) do
-    a + b
-  end
-end
+#   def sum(a,0) do
+#     a + b
+#   end
+# end
 
 
 
@@ -54,45 +54,45 @@ end
 
 
 
-defmodule Calculadora do
+# defmodule Calculadora do
 
-  def sumar(a , b \\ 0) do
-    a + b
-  end
+#   def sumar(a , b \\ 0) do
+#     a + b
+#   end
 
-  def resta(a , b) do
-    a - b
-  end
+#   def resta(a , b) do
+#     a - b
+#   end
 
-  def multiplicar(a , b) do
-    a * b
-  end
+#   def multiplicar(a , b) do
+#     a * b
+#   end
 
-  def dividir(a , b) do
-    div(a,b)
-  end
-end
+#   def dividir(a , b) do
+#     div(a,b)
+#   end
+# end
 
-IO.puts("Suma /2 se espera el resultado 11")
-Calculadora.sumar(5, 6) #11
-|> IO.puts()
+# IO.puts("Suma /2 se espera el resultado 11")
+# Calculadora.sumar(5, 6) #11
+# |> IO.puts()
 
-IO.puts("Suma /1 defaul 0  se espera el resultado 5")
-Calculadora.sumar(5) # 5
-|> IO.puts()
+# IO.puts("Suma /1 defaul 0  se espera el resultado 5")
+# Calculadora.sumar(5) # 5
+# |> IO.puts()
 
-IO.puts("Resta /2 se espera el resultado 2")
-Calculadora.resta(10 , 8) # 2
-|> IO.puts()
+# IO.puts("Resta /2 se espera el resultado 2")
+# Calculadora.resta(10 , 8) # 2
+# |> IO.puts()
 
-IO.puts("Multiplicacion se espera el resultado 25")
-Calculadora.multiplicar(5 , 5) # 25
-|> IO.puts()
+# IO.puts("Multiplicacion se espera el resultado 25")
+# Calculadora.multiplicar(5 , 5) # 25
+# |> IO.puts()
 
-IO.puts("Division se espera el resultado 1")
+# IO.puts("Division se espera el resultado 1")
 
-Calculadora.dividir(5 , 5) # 1
-|> IO.puts()
+# Calculadora.dividir(5 , 5) # 1
+# |> IO.puts()
 
 
 
@@ -103,38 +103,38 @@ Calculadora.dividir(5 , 5) # 1
 # 2. maximo/1 → recibe una lista y devuelve el máximo
 # 3. minimo/1 → recibe una lista y devuelve el mínimo
 
-defmodule Calculadora do
-  def promedio(lista) do
-    Enum.sum(lista) / length(lista)
-  end
+# defmodule Calculadora do
+#   def promedio(lista) do
+#     Enum.sum(lista) / length(lista)
+#   end
 
-  def maximo(lista) do
-    Enum.reduce(lista, 0, fn numero, mayor ->
-      if numero > mayor do
-        numero
-      else
-        mayor
-      end
-    end)
-  end
+#   def maximo(lista) do
+#     Enum.reduce(lista, 0, fn numero, mayor ->
+#       if numero > mayor do
+#         numero
+#       else
+#         mayor
+#       end
+#     end)
+#   end
 
-  def minimo(lista) do
-    Enum.reduce(lista, fn numero, minimo ->
-      if numero < minimo do
-        numero
-      else
-        minimo
-      end
-    end)
-  end
-end
+#   def minimo(lista) do
+#     Enum.reduce(lista, fn numero, minimo ->
+#       if numero < minimo do
+#         numero
+#       else
+#         minimo
+#       end
+#     end)
+#   end
+# end
 
 
 # Prueba:
-lista = [10, 20, 30, 40, 50]
-Calculadora.promedio(lista) |> IO.puts()  # 30
-Calculadora.maximo(lista) |> IO.puts()    # 50
-Calculadora.minimo(lista) |> IO.puts()    # 10
+# lista = [10, 20, 30, 40, 50]
+# Calculadora.promedio(lista) |> IO.puts()  # 30
+# Calculadora.maximo(lista) |> IO.puts()    # 50
+# Calculadora.minimo(lista) |> IO.puts()    # 10
 
 
 
@@ -142,76 +142,138 @@ Calculadora.minimo(lista) |> IO.puts()    # 10
 
 
 # lo que hices
-defmodule Calculadora do
-  import IO
+# defmodule Calculadora do
+#   import IO
 
-  def sumar(a , b \\ 0) do
-    a + b |> puts()
-  end
+#   def sumar(a , b \\ 0) do
+#     a + b |> puts()
+#   end
 
-  def restar(a , b \\ 0), do: a - b |> puts()
+#   def restar(a , b \\ 0), do: a - b |> puts()
 
-  def dividir(a , b \\ 0), do: a / b |> puts()
+#   def dividir(a , b \\ 0), do: a / b |> puts()
 
-  def dividir_entero(a , b \\ 0), do: div(a,b) |> puts()
+#   def dividir_entero(a , b \\ 0), do: div(a,b) |> puts()
 
-  def multiplicar(a , b \\ 0), do: a * b |> puts()
+#   def multiplicar(a , b \\ 0), do: a * b |> puts()
 
-  def residuo(a , b \\ 0), do: rem(a,b) |> puts()
+#   def residuo(a , b \\ 0), do: rem(a,b) |> puts()
+# end
 
-
-end
-
-Calculadora.sumar(5,3)
-# 8
-
-Calculadora.restar(10, 4)
-# 5.0
-
-Calculadora.dividir(10, 2)
-# 5.0
-
-Calculadora.dividir_entero(10, 3)
-# 3
-
-Calculadora.residuo(10, 3)
-# 1
-Calculadora.multiplicar(10, 3)
-# 30
+# Calculadora.sumar(5,3)
+# Calculadora.restar(10, 4)
+# Calculadora.dividir(10, 2)
+# Calculadora.dividir_entero(10, 3)
+# Calculadora.residuo(10, 3)
+# Calculadora.multiplicar(10, 3)
 
 
 
 # correccion
 
-defmodule Calculadora do
-  def sumar(a, b) do
-    a + b
+# defmodule Calculadora do
+#   def sumar(a, b) do
+#     a + b
+#   end
+
+#   def restar(a, b) do
+#     a - b
+#   end
+
+#   def dividir(a, b) do
+#     a / b
+#   end
+
+#   def dividir_entero(a, b) do
+#     div(a, b)
+#   end
+
+#   def multiplicar(a, b) do
+#     a * b
+#   end
+
+#   def residuo(a, b) do
+#     rem(a, b)
+#   end
+# end
+
+# IO.puts(Calculadora.sumar(5, 3))
+# IO.puts(Calculadora.restar(10, 4))
+# IO.puts(Calculadora.dividir(10, 2))
+# IO.puts(Calculadora.dividir_entero(10, 3))
+# IO.puts(Calculadora.multiplicar(4, 5))
+# IO.puts(Calculadora.residuo(10, 3))
+
+
+
+
+# | Requerimiento                | Detalle                                                             |
+# | ---------------------------- | ------------------------------------------------------------------- |
+# | Crear un módulo              | El módulo debe llamarse `Areas`.                                    |
+# | Crear función `rectangulo/2` | Recibe base y altura. Devuelve `base * altura`.                     |
+# | Crear función `cuadrado/1`   | Recibe un lado. Devuelve `lado * lado`.                             |
+# | Crear función `triangulo/2`  | Recibe base y altura. Devuelve `(base * altura) / 2`.               |
+# | Crear función `circulo/1`    | Recibe radio. Devuelve `3.1416 * radio * radio`.                    |
+# | Usar retorno implícito       | No debes usar `return`, porque Elixir devuelve la última expresión. |
+# | Mostrar resultados           | Imprime varios ejemplos con `IO.puts`.                              |
+
+
+
+defmodule Areas do
+  @pi 3.1416
+  def rectangulo(base,altura) do
+    base * altura
   end
 
-  def restar(a, b) do
-    a - b
+  def cuadrado(a) do
+    a * a
   end
 
-  def dividir(a, b) do
-    a / b
+  def triangulo(a,b) do
+    (a * b)/2
   end
 
-  def dividir_entero(a, b) do
-    div(a, b)
+  def circulo(a) do
+    @pi * a * a
   end
 
-  def multiplicar(a, b) do
-    a * b
+end
+
+# IO.puts(Areas.rectangulo(5, 3))
+# IO.puts(Areas.cuadrado(5))
+# Areas.triangulo(5,6) |> IO.puts()
+# Areas.circulo(5) |> IO.puts()
+
+
+
+# | Requerimiento                        | Detalle                                                                   |
+# | ------------------------------------ | ------------------------------------------------------------------------- |
+# | Crear un módulo                      | El módulo debe llamarse `Comisiones`.                                     |
+# | Crear función `calcular/2`           | Recibe monto de venta y porcentaje de comisión.                           |
+# | Crear parámetro por defecto          | El porcentaje debe tener un valor por defecto, por ejemplo `10`.          |
+# | Practicar aridad                     | Debes poder llamar `calcular/1` y `calcular/2`.                           |
+# | Crear función `total_con_comision/2` | Debe devolver venta + comisión.                                           |
+# | Crear función privada                | Puedes crear `defp porcentaje_a_decimal/1` para convertir `10` en `0.10`. |
+# | Mostrar resultados                   | Imprime ejemplos usando comisión por defecto y comisión personalizada.    |
+
+
+defmodule Comisiones do
+  import IO
+  def calcular(a,b \\ 10) do
+    a + b |> puts()
+    _porcentaje = porcentaje_a_decimal(5)
   end
 
-  def residuo(a, b) do
-    rem(a, b)
+  # Funcion privada
+  defp porcentaje_a_decimal(a) do
+    a / 100
   end
 end
 
-IO.puts(Calculadora.sumar(5, 3))
-IO.puts(Calculadora.restar(10, 4))
-IO.puts(Calculadora.dividir(10, 2))
-IO.puts(Calculadora.dividir_entero(10, 3))
-IO.puts(Calculadora.multiplicar(4, 5))
-IO.puts(Calculadora.residuo(10, 3))
+
+Comisiones.calcular(5) |> IO.puts()
+
+
+
+
+
