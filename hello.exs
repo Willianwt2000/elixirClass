@@ -81,4 +81,54 @@ defmodule Sumadora do
 end
 
 # Cómo probarlo:
-Sumadora.sumar([1, 2, 3, 4])  |> IO.puts()
+# Sumadora.sumar([1, 2, 3, 4])  |> IO.puts()
+
+
+
+defmodule Filtrador do
+  def solo_pares([]), do: []
+
+  # Patrón 1: Si la cabeza es par (rem(cabeza, 2) == 0)
+  def solo_pares([cabeza | cola]) when rem(cabeza, 2) == 0 do
+    [cabeza | solo_pares(cola)]
+  end
+
+  # Patrón 2: Si no es par, cae aquí (el _ ignora el valor)
+  def solo_pares([_impar | cola]) do
+    solo_pares(cola)
+  end
+end
+
+
+# two sum
+
+defmodule Solution do
+  def two_sum(nums, target) do
+
+  end
+end
+
+
+# IO.inspect Solution.two_sum([2, 7, 11, 15], 9)
+# IO.inspect Solution.two_sum([3, 2, 4], 6)
+# IO.inspect Solution.two_sum([3, 3], 6)
+
+
+
+# practice case
+
+list = [1,2,3]
+
+defmodule Caseptc do
+  def cases(list) do
+    case Enum.at(list,1) do
+      1 ->  IO.puts("NO")
+      2 ->  IO.puts("YES!!!")
+      3 -> IO.puts("NO Es")
+    end
+  end
+end
+
+
+
+Caseptc.cases(list)
